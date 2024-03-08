@@ -3,7 +3,7 @@ import logging
 import os
 from pathlib import Path
 from typing import Any, List, Mapping, Tuple, Union
-from gym import Env, spaces
+from gymnasium import Env, spaces
 import numpy as np
 import pandas as pd
 from citylearn.base import Environment

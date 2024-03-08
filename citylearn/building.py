@@ -1,7 +1,7 @@
 import inspect
 import math
 from typing import List, Mapping, Tuple, Union
-from gym import spaces
+from gymnasium import spaces
 import numpy as np
 from citylearn.base import Environment
 from citylearn.data import EnergySimulation, CarbonIntensity, Pricing, Weather

@@ -1,6 +1,6 @@
 import itertools
 from typing import List, Mapping
-from gym import ActionWrapper, ObservationWrapper, RewardWrapper, spaces, Wrapper
+from gymnasium import ActionWrapper, ObservationWrapper, RewardWrapper, spaces, Wrapper
 import numpy as np
 from citylearn.citylearn import CityLearnEnv
 
