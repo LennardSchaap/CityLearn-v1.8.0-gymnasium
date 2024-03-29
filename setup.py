@@ -28,6 +28,7 @@ setuptools.setup(
     url='https://github.com/intelligent-environments-lab/CityLearn',
     packages=setuptools.find_packages(),
     include_package_data=True,
+    package_data={'citylearn': ['data/**/*']},
     install_requires=requirements,
     entry_points={'console_scripts': ['citylearn = citylearn.main:main']},
     classifiers=[
