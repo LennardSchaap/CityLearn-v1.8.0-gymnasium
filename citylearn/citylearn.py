@@ -500,7 +500,7 @@ class CityLearnEnv(Environment, Env):
         self.next_time_step()
         reward = self.reward_function.calculate()
         self.__rewards.append(reward)
-        return self.observations, reward, self.done, self.get_info()
+        return self.observations, reward, self.done, self.done, self.get_info()
 
     def get_info(self) -> Mapping[Any, Any]:
         return {}
@@ -657,7 +657,7 @@ class CityLearnEnv(Environment, Env):
         super().next_time_step()
         self.update_variables()
 
-    def reset(self) -> List[List[float]]:
+    def reset(self, seed=None, options=None) -> List[List[float]]:
         r"""Reset `CityLearnEnv` to initial state.
         
         Returns
@@ -679,7 +679,7 @@ class CityLearnEnv(Environment, Env):
         self.__net_electricity_consumption_emission = []
         self.update_variables()
 
-        return self.observations
+        return self.observations, self.get_info()
 
     def update_variables(self):
         # net electricity consumption
